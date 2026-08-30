@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Stagehand",
+      "hasCanvas": false,
+      "bodyTextLen": 219,
+      "bodyTextHash": "1b72094d8f37b309859ae302f787ff938b16933d2805800f760e13e6ed921aa4",
+      "bodyTextPrefix": "Stagehand Headless OBS control OFFLINE STAGEHAND Bringing up the",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Stagehand",
+      "hasCanvas": false,
+      "bodyTextLen": 198,
+      "bodyTextHash": "2e4d977833a0ecb4c6c200e7cd5506027a1df535a681b437a99b1ba4d8ef8fb3",
+      "bodyTextPrefix": "Stagehand OFFLINE STAGEHAND Bringing up the studio Allocating fr",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

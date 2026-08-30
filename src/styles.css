@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #090a0c;
+  --color-surface: #111318;
+  --color-surface-2: #181b22;
+  --color-fg: #e8eaee;
+  --color-muted: #8b919c;
+  --color-subtle: #5c6370;
+  --color-border: #23262e;
+  --color-accent: #9aabbd;
+  --color-accent-fg: #0a0c10;
+  --color-live: #c4544a;
+  --color-ready: #6a8f78;
+  --color-warn: #b08948;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-micro: 0.625rem;
+  --text-micro--line-height: 1.2;
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1.25;
+  --tracking-kicker: 0.22em;
+  --tracking-display: 0.28em;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+
+  --shadow-hairline: 0 0 0 1px color-mix(in oklab, var(--color-fg) 10%, transparent);
+  --shadow-hairline-strong: 0 0 0 1px color-mix(in oklab, var(--color-fg) 16%, transparent);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--color-accent) 70%, transparent);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes live-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes meter-fall {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.15);
+  }
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-40%);
+  }
+  to {
+    transform: translateY(140%);
+  }
+}
+
+@keyframes chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes boot-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.live-dot {
+  animation: live-dot 1.6s var(--ease-out-smooth) infinite;
+}
+
+.boot-row {
+  animation: boot-in 400ms var(--ease-out-smooth) both;
+}
+
+.pgm-scan {
+  animation: scan 7s linear infinite;
+}

@@ -1,0 +1,5 @@
+{
+  "title": "Stagehand",
+  "description": "Headless OBS control room. Drive a virtual studio over obs-websocket — scenes, stream, record, and the Docker + Xvfb stack.",
+  "card": "custom"
+}
